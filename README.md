@@ -21,3 +21,8 @@ cd ThePAK
 chmod +x setup
 bash setup
 ```
+6. Done.
+
+**See the [wiki](https://github.com/Ramonymous/ThePAK/wiki) page for more information.**
+
+***Support me by contributing or buying me a cup of coffee.***
