@@ -1,0 +1,67 @@
+#!/bin/bash
+# Installer for ThePAK
+
+source etc/banner
+# Banner Add
+echo -e "executing: ${LIGHTGREEN}SETUP${NOCOLOR}"
+echo "-----------------------"
+# Setup directory for Requirements
+quickbms_dir=$PREFIX/share/quickbms
+
+function redirect {
+ echo -e "${LIGHTGREEN}STARTING THEPAK${NOCOLOR}"
+ echo -ne '#####                     (33%)\r'
+ sleep 1
+ echo -ne '#############             (66%)\r'
+ sleep 1
+ echo -ne '#######################   (100%)\r'
+ echo -ne '\n'
+bash thepak
+}
+
+function quickbms_check {
+  echo -e "${YELLOW}Checking required program..${NOCOLOR}"
+  FILE=$quickbms_dir/quickbms
+  if [ -f "$FILE" ]; then
+      echo -e "${LIGHTGREEN}Program has been installed.${NOCOLOR}"
+      redirect
+  else 
+      echo -e "${RED}PROGRAM NOT FOUND.${NOCOLOR}"
+      quickbms_install
+      redirect
+  fi
+}
+
+function quickbms_install {
+  echo -e "${LIGHTGREEN}Installing required program..${NOCOLOR}"
+  wget -q http://aluigi.altervista.org/papers/quickbms_linux.zip
+  sleep 1
+  unzip -qq quickbms_linux.zip
+  sleep 1
+  mkdir $PREFIX/share/quickbms
+  sleep 1
+  chmod +x quickbms_4gb_files
+  sleep 1
+  cp -rlf quickbms_4gb_files $quickbms_dir/quickbms
+  sleep 1
+  chmod +x etc/tools.bms thepak
+  sleep 1
+}
+
+#Checking Required Pakcages
+echo -e "${YELLOW}Checking Required packages${NOCOLOR}"
+
+packages=("wget" "unzip" "curl" "x11-repo" "qemu-system-i386" "qemu-user-i386")
+
+for pkg in ${packages[@]}; do
+
+    is_pkg_installed=$(dpkg-query -W --showformat='${Status}\n' ${pkg} | grep "install ok installed")
+
+    if [ "${is_pkg_installed}" == "install ok installed" ]; then
+        echo -e ${GREEN}${pkg}${NOCOLOR} is installed.
+    else [ "" = "${is_pkg_installed}" ];
+     echo -e "${RED}No ${pkg}. Setting up ${pkg}.${NOCOLOR}" 
+    pkg install ${pkg} -y
+    fi
+done
+quickbms_check
