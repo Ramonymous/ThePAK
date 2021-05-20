@@ -44,7 +44,7 @@ do
             ;;
         "Repack")
             repack
-            break
+            
             ;;
         "Quit")
             break
