@@ -23,6 +23,9 @@ bash setup
 ```
 6. Done.
 
-**See the [wiki](https://github.com/Ramonymous/ThePAK/wiki) page for more information.**
+## Contributing
+To-do List
+- [ ] Extracting with the default folder (tool.bms)
+- [ ] Make sure the result is not a dat extension
 
-***Support me by contributing or buying me a cup of coffee.***
+
