@@ -38,3 +38,5 @@ bash setup
 ![Result](/screenshot/complete_repacking.jpg)
 5. Before and After Repacking
 ![Result](/screenshot/beforeafter_repacking.jpg)
+
+### Subscribe to my YouTube channel to get updated script https://m.youtube.com/channel/UCaSgCLuITuQxXWWsdNfjyVw
