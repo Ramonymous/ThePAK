@@ -22,10 +22,3 @@ chmod +x setup
 bash setup
 ```
 6. Done.
-
-## Contributing
-To-do List
-- [ ] Extracting with the default folder (tool.bms)
-- [ ] Make sure the result is not a dat extension
-
-

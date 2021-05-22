@@ -5,8 +5,20 @@ source etc/banner
 echo -e "executing: ${LIGHTGREEN}ThePAK${NOCOLOR}"
 echo "-----------------------"
 
+if [[ -d "output" ]]
+  then
+    echo ""
+  else
+    echo ""
+    mkdir output
+fi
+
 unpacking () {
-  qemu-i386 $PREFIX/share/quickbms/quickbms -Q -d etc/tools.bms $opt
+  qemu-i386 $PREFIX/share/quickbms/quickbms -Q etc/tools.bms $opt output
+}
+
+repacking () {
+  qemu-i386 $PREFIX/share/quickbms/quickbms -w -r -r etc/tools.bms $opt output
 }
 
 function unpack {
@@ -30,7 +42,22 @@ done
 }
 
 function repack {
-  echo "Coming soon~"
+prompt="Please select a file to repack:"
+options=( $(find *.pak) )
+
+PS3="$prompt "
+select opt in "${options[@]}" "Quit" ; do 
+    if (( REPLY == 1 + ${#options[@]} )) ; then
+        exit
+
+    elif (( REPLY > 0 && REPLY <= ${#options[@]} )) ; then
+        echo  "You picked $opt which is file $REPLY"
+         repacking
+        break
+    else
+        echo "Invalid option. Try another one."
+    fi
+done
 }
 
 PS3='Please enter your choice: '

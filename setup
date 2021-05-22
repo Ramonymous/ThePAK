@@ -47,6 +47,8 @@ function quickbms_install {
   chmod +x etc/tools.bms thepak
   sleep 1
   rm -rf quickbms*
+  rm setup
+  mkdir output
 }
 
 #Checking Required Pakcages
