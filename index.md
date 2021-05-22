@@ -27,15 +27,15 @@ bash setup
 2. Select option 1
 3. Select your pak file
 4. And the result will be like this
-![Result](https://github.com/Ramonymous/ThePAK/screenshot/complete_extraction.jpg)
+![Result](https://raw.githubusercontent.com/Ramonymous/ThePAK/main/screenshot/complete_extraction.jpg)
 
 ## Repacking
 1. Run `bash thepak`
 2. Select option 2
 3. Select your pak file
 4. And the result will be like this
-![Result](https://github.com/Ramonymous/ThePAK/screenshot/complete_repacking.jpg)
+![Result](https://raw.githubusercontent.com/Ramonymous/ThePAK/main/screenshot/complete_repacking.jpg)
 5. Before and After Repacking
-![Result](https://github.com/Ramonymous/ThePAK/screenshot/beforeafter_repacking.jpg)
+![Result](https://raw.githubusercontent.com/Ramonymous/ThePAK/main/screenshot/beforeafter_repacking.jpg)
 
 ### Subscribe to my YouTube channel to get updated script https://m.youtube.com/channel/UCaSgCLuITuQxXWWsdNfjyVw
