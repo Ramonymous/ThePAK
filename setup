@@ -42,10 +42,11 @@ function quickbms_install {
   sleep 1
   chmod +x quickbms_4gb_files
   sleep 1
-  cp -rlf quickbms_4gb_files $quickbms_dir/quickbms
+  yes | cp -rf quickbms_4gb_files $quickbms_dir/quickbms
   sleep 1
   chmod +x etc/tools.bms thepak
   sleep 1
+  rm -rf quickbms*
 }
 
 #Checking Required Pakcages
