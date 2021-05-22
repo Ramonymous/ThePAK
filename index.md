@@ -1,37 +1,42 @@
-## Welcome to GitHub Pages
+# ThePAK
+_ThePAK is a tool created to modify the PUBG Mobile PAK file. This tool is still in the process of being developed and unstable, however, this tool can extract pak files and the results can be read by a text editor._
 
-You can use the [editor on GitHub](https://github.com/Ramonymous/ThePAK/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+## Installing
+1. Install Termux from PlayStore,
+2. Open the Termux App and wait for the installation process,
+3. Enter This Command:
 ```
+termux-setup-storage
+pkg update
+pkg upgrade
+pkg install git
+```
+4. Clone this repository
+```
+git clone https://github.com/Ramonymous/ThePAK
+```
+5. Open ThePAK directory and run setup.
+```
+cd ThePAK
+chmod +x setup
+bash setup
+```
+6. Done.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Unpacking
+1. Run `bash thepak`
+2. Select option 1
+3. Select your pak file
+4. And the result will be like this
+![Result](/screenshot/complete_extraction.jpg)
 
-### Jekyll Themes
+## Repacking
+1. Run `bash thepak`
+2. Select option 2
+3. Select your pak file
+4. And the result will be like this
+![Result](/screenshot/complete_repacking.jpg)
+5. Before and After Repacking
+![Result](/screenshot/beforeafter_repacking.jpg)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Ramonymous/ThePAK/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Subscribe to my YouTube channel to get updated script https://m.youtube.com/channel/UCaSgCLuITuQxXWWsdNfjyVw
